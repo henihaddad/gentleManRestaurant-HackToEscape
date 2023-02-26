@@ -1,0 +1,36 @@
+<style>
+   .c{
+        background: red;
+        width: 100%;
+        height: 20px;
+    }
+    .griiid{
+        display: grid;
+        grid-template-columns: repeat( 3,200px );
+        grid-template-rows: repeat(3,200px);
+        grid-gap: 70px;
+        margin: 10px;
+        background: transparent;
+    }
+    .griiid>div{
+        border-radius: 50%;
+        padding: 40%;
+    }
+    .griiid>div:nth-child(even){
+        background: blue;
+    }
+     .griiid>div:nth-child(odd){
+        background: yellow;
+    }
+
+</style>
+{% extends 'base.html' %}
+{% block title %}
+My profile - Profile
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        Welcome, {{ user[0] }}
+    </div>
+{% endblock %}

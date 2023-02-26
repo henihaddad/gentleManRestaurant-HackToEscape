@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Medical Mechanica - Home
+{% endblock %}
+
+{% block content %}
+<div class="introductory">
+            <img class='factory-img' height="400px" width="400px" src={{ url_for('static',filename='img.png' ) }}>
+
+            <div id="info">
+                <p><span class="bold color2">GentleMan Restaurant</span> Welcome to our restaurant! We offer delicious, high-quality food made from fresh, locally sourced ingredients, served in a welcoming atmosphere with friendly, knowledgeable staff. Our menu features a variety of beautifully prepared dishes, and our beverage selection includes wine, beer, cocktails, and non-alcoholic options. Our kitchen is clean and organized, ensuring that all food is prepared safely and hygienically. Come dine with us and enjoy a fantastic dining experience with warmth and hospitality. </p>
+            </div>
+
+        </div>
+        <div class="v-spacer-md"></div>
+        <div class="content">
+            <h1>In <span class="bold color2">GentleMan Restaurant
+ </span>, pasta is the best !  <span
+                    style="font-style:normal">🍝🍝</span></h1>
+            <h2>Login to see all delicious food we are making and order !  😇😇</h2>
+            <div class="v-spacer-md"></div>
+            <a class='btn' href={{url_for('login')}}>Login</a>
+        <a class='btn' href={{url_for('register')}}>Register</a>
+        </div>
+{% endblock %}
